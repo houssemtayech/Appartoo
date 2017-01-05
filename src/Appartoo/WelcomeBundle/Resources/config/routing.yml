@@ -1,0 +1,3 @@
+appartoo_welcome_homepage:
+    path:     /
+    defaults: { _controller: AppartooWelcomeBundle:Default:index }

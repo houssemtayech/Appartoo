@@ -1,0 +1,46 @@
+{% extends "AppartooAppBundle::layout.html.twig" %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading"><h3 class="panel-title">Liste des membres</h3></div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>Username</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for user in users %}
+                                    <tr>
+                                        <td>{{ user.username }}</td>
+                                        <td>{% if app.user.id == user.id %}
+                                                <h4>C'est votre compte</h4>
+                                            {% else %}
+
+                                                <a class="btn btn-primary waves-effect waves-light" href="{{path('appartoo_app_ajouter_ami',{'id':user.id})}}">Ajouter</a>
+                                            {% endif %}</td>
+
+                                    </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

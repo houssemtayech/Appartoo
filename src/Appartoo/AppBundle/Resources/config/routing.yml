@@ -1,0 +1,19 @@
+appartoo_app_homepage:
+    path:     /
+    defaults: { _controller: AppartooAppBundle:Default:index }
+
+appartoo_app_list_user:
+    path:     /listusers
+    defaults: { _controller: AppartooAppBundle:User:listUser }
+
+appartoo_app_ajouter_ami:
+    path:     /ajouterami/{id}
+    defaults: { _controller: AppartooAppBundle:Ami:ajouter }
+
+appartoo_app_list_ami:
+    path:     /listeramis
+    defaults: { _controller: AppartooAppBundle:Ami:listeAmis }
+
+appartoo_app_supprimer_ami:
+    path:     /supprimerami/{id}
+    defaults: { _controller: AppartooAppBundle:Ami:supprimer }
